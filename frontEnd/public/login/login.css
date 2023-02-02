@@ -68,17 +68,20 @@ button {
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
-  border-bottom: 0.2vh solid #eeeeee;
-  background-color: #12bd7e;
   z-index: 1000;
+  border-bottom: 0.2vh solid #F5F5F5;
 }
 .navbar .navbar__logo {
   font-weight: 700;
-  color: #ECECEC;
+  color: #14BD7E;
 }
-.navbar .navbar__icons i {
-  color: #ECECEC;
-  padding: 0 1vw;
+.navbar .navbar__btns span {
+  font-size: 1rem;
+  color: #14BD7E;
+  padding: 0 0.5vw;
+  font-weight: 600;
+}
+.navbar .navbar__btns span:nth-child(2n+1) {
   cursor: pointer;
 }
 
@@ -257,6 +260,136 @@ button {
     opacity: 0;
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.05;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.15;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  35% {
+    opacity: 0.35;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  55% {
+    opacity: 0.55;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  65% {
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  95% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.05;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.15;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  35% {
+    opacity: 0.35;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  55% {
+    opacity: 0.55;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  65% {
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  95% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* main */
 .main {
   height: 90vh;
@@ -268,7 +401,7 @@ button {
   position: fixed;
   width: 3vw;
   cursor: pointer;
-  color: #12BD7E;
+  color: #14BD7E;
   left: 2vw;
   bottom: 2vw;
 }
@@ -276,7 +409,7 @@ button {
   bottom: 2.5vw;
 }
 .main .chatBotArea {
-  transition: 1.5s;
+  transition: 1s;
   border-radius: 2vh;
   padding: 2vh;
   position: fixed;
@@ -295,7 +428,7 @@ button {
   margin: 0 0 1.5vh;
   padding: 0.5vh 0;
   transition: 0.5s;
-  background-color: #12BD7E;
+  background-color: #14BD7E;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,13 +461,13 @@ button {
   cursor: pointer;
   margin-bottom: 1vw;
   margin-right: -1vw;
-  color: #12BD7E;
+  color: #14BD7E;
 }
 .main .chatBotArea .chatBotArea__chat {
   margin: 1.5vh 0;
   padding: 0.5vh 1.5vw;
   height: 5vh;
-  background-color: #12BD7E;
+  background-color: #14BD7E;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -442,62 +575,6 @@ button {
   transition: 0.5s;
 }
 
-/* search bar */
-.searchBar {
-  padding: 3vh 0;
-  width: 100vw;
-  height: 20vh;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 0.2vh solid #eeeeee;
-}
-.searchBar .searchBar__left {
-  width: 45vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #12BD7E;
-  cursor: pointer;
-}
-.searchBar .searchBar__left:hover img {
-  margin-bottom: 5.2vh;
-}
-.searchBar .searchBar__left img {
-  transition: 0.5s;
-  margin-bottom: 4vh;
-  width: 2.5vw;
-}
-.searchBar .searchBar__left h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ECECEC;
-}
-.searchBar .searchBar__right {
-  width: 45vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #12BD7E;
-  cursor: pointer;
-}
-.searchBar .searchBar__right:hover img {
-  margin-bottom: 5.2vh;
-}
-.searchBar .searchBar__right img {
-  transition: 0.5s;
-  margin-bottom: 4vh;
-  width: 4vw;
-}
-.searchBar .searchBar__right h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ECECEC;
-}
-
 /* login Area */
 .loginArea {
   position: fixed;
@@ -519,40 +596,41 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: #01C787;
+  color: #14BD7E;
+  background-color: #fff;
 }
 .loginArea .loginArea__backGround .loginArea__frame h1 {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3.5rem;
-  color: #01C787;
+  color: #14BD7E;
   font-weight: 700;
   margin: 2vh 0 5vh 0;
 }
 .loginArea .loginArea__backGround .loginArea__frame input {
-  color: #01C787;
-  background-color: #ECECEC;
+  color: #14BD7E;
+  background-color: #FAFAFB;
   font-size: 1.2rem;
   text-align: center;
   padding: 2vh 0;
   font-weight: 600;
 }
 .loginArea .loginArea__backGround .loginArea__frame input::-moz-placeholder {
-  color: #01C787;
+  color: #D5DDE6;
 }
 .loginArea .loginArea__backGround .loginArea__frame input:-ms-input-placeholder {
-  color: #01C787;
+  color: #D5DDE6;
 }
 .loginArea .loginArea__backGround .loginArea__frame input::placeholder {
-  color: #01C787;
+  color: #D5DDE6;
 }
 .loginArea .loginArea__backGround .loginArea__frame button {
   padding: 2vh 0;
-  color: #ECECEC;
-  background-color: #01C787;
+  color: #fff;
+  background-color: #14BD7E;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .loginArea .loginArea__backGround .loginArea__frame label {
   display: flex;
@@ -566,115 +644,8 @@ button {
   flex-grow: 2;
 }
 .loginArea .loginArea__backGround .loginArea__frame label button {
-  color: #01C787;
+  color: #14BD7E;
   background-color: rgba(0, 0, 0, 0);
   flex-grow: 8;
   font-size: 1.2rem;
-}
-
-/* register Area */
-.registerArea {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-}
-.registerArea .registerArea__backGround {
-  background-color: #FCFCFE;
-  height: 100%;
-  width: 20%;
-  margin: 0 auto;
-}
-.registerArea .registerArea__backGround .registerArea__frame {
-  height: 50%;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: #01C787;
-}
-.registerArea .registerArea__backGround .registerArea__frame h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3.5rem;
-  color: #01C787;
-  font-weight: 700;
-  margin: 2vh 0 5vh 0;
-}
-.registerArea .registerArea__backGround .registerArea__frame .registerArea__dropDownArea {
-  display: flex;
-  justify-content: space-between;
-}
-.registerArea .registerArea__backGround .registerArea__frame .registerArea__dropDownArea select {
-  font-weight: 600;
-  border: none;
-  padding: 2vh 0;
-  font-size: 1.1rem;
-  width: 45%;
-  background-color: #01C787;
-  color: #ECECEC;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  cursor: pointer;
-  text-align: center;
-}
-.registerArea .registerArea__backGround .registerArea__frame .registerArea__dropDownArea select:focus {
-  outline: none;
-}
-.registerArea .registerArea__backGround .registerArea__frame .registerArea__IDArea {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.registerArea .registerArea__backGround .registerArea__frame .registerArea__IDArea button {
-  padding: 2vh 0.5vw;
-  color: #ECECEC;
-  background-color: #01C787;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.registerArea .registerArea__backGround .registerArea__frame input {
-  color: #01C787;
-  background-color: #ECECEC;
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 2vh 0;
-  font-weight: 600;
-}
-.registerArea .registerArea__backGround .registerArea__frame input::-moz-placeholder {
-  color: #01C787;
-}
-.registerArea .registerArea__backGround .registerArea__frame input:-ms-input-placeholder {
-  color: #01C787;
-}
-.registerArea .registerArea__backGround .registerArea__frame input::placeholder {
-  color: #01C787;
-}
-.registerArea .registerArea__backGround .registerArea__frame button {
-  padding: 2vh 0;
-  color: #ECECEC;
-  background-color: #01C787;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.registerArea .registerArea__backGround .registerArea__frame label {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.registerArea .registerArea__backGround .registerArea__frame label span {
-  font-size: 1.2rem;
-  color: #B6B2B2;
-  font-weight: 500;
-  flex-grow: 2;
-}
-.registerArea .registerArea__backGround .registerArea__frame label button {
-  color: #01C787;
-  background-color: rgba(0, 0, 0, 0);
-  flex-grow: 8;
-  font-size: 1.2rem;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=login.css.map */
