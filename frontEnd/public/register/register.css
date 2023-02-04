@@ -247,7 +247,7 @@ button {
   margin: 0 auto;
 }
 .registerArea .registerArea__backGround .registerArea__frame {
-  height: 80%;
+  height: 90%;
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -255,20 +255,59 @@ button {
   justify-content: space-around;
   color: #14BD7E;
 }
+.registerArea .registerArea__backGround .registerArea__frame button {
+  padding: 2vh 0;
+  color: #fff;
+  background-color: #14BD7E;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.5vh;
+}
 .registerArea .registerArea__backGround .registerArea__frame .registerArea__termOfUse {
-  height: 20%;
-  width: 100%;
+  height: 40%;
+  margin: 0 auto 1vh;
+  width: 95%;
+  border-radius: 0.5vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: #000;
-  padding: 0 0.5vw;
+  padding: 1vh 0.5vw 0;
+  outline: 0.2vh solid #14BD72;
+  box-shadow: 0.2vw 0.2vh 0.5vw 0 gray;
 }
 .registerArea .registerArea__backGround .registerArea__frame .registerArea__termOfUse h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 2vh;
+  height: 15%;
+}
+.registerArea .registerArea__backGround .registerArea__frame .registerArea__termOfUse p {
+  border-radius: 0.5vh;
+  width: 90%;
+  height: 60%;
+  padding: 0.5vh 1vw;
+  font-size: 0.8rem;
+  overflow-y: scroll;
+  background-color: #ECECEC;
+}
+.registerArea .registerArea__backGround .registerArea__frame .registerArea__termOfUse .registerArea__btnBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+.registerArea .registerArea__backGround .registerArea__frame .registerArea__termOfUse .registerArea__btnBox .registerArea__termOfUseContentBtn {
+  background-color: #9CE0C2;
+  font-size: 0.6rem;
+  padding: 0.5vh 0.5vw;
+  width: 50%;
+  border-radius: 0.5vh;
+  margin-right: 0.8vw;
+}
+.registerArea .registerArea__backGround .registerArea__frame .registerArea__termOfUse .registerArea__btnBox .registerArea__termOfUseContentBtn:hover {
+  background-color: #14BD7E;
 }
 .registerArea .registerArea__backGround .registerArea__frame h1 {
   display: flex;
@@ -288,7 +327,7 @@ button {
   border: none;
   padding: 2vh 0;
   font-size: 1.1rem;
-  width: 45%;
+  width: 50%;
   background-color: #14BD7E;
   color: #fff;
   -webkit-appearance: none;
@@ -296,7 +335,13 @@ button {
           appearance: none;
   cursor: pointer;
   text-align: center;
-  border-radius: 0.5vh;
+}
+.registerArea .registerArea__backGround .registerArea__frame .registerArea__dropDownArea select:nth-child(1) {
+  background-color: #80E3C3;
+  border-radius: 0.5vh 0 0 0.5vh;
+}
+.registerArea .registerArea__backGround .registerArea__frame .registerArea__dropDownArea select:nth-child(2) {
+  border-radius: 0 0.5vh 0.5vh 0;
 }
 .registerArea .registerArea__backGround .registerArea__frame .registerArea__dropDownArea select:focus {
   outline: none;
@@ -334,14 +379,6 @@ button {
 }
 .registerArea .registerArea__backGround .registerArea__frame input:focus {
   outline: 0.2vh solid #14BD7E;
-}
-.registerArea .registerArea__backGround .registerArea__frame button {
-  padding: 2vh 0;
-  color: #fff;
-  background-color: #14BD7E;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 0.5vh;
 }
 .registerArea .registerArea__backGround .registerArea__frame label {
   display: flex;
