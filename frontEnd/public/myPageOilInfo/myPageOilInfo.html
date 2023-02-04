@@ -31,7 +31,44 @@
                     <div class="oilInfoArea__tab">tab1</div>
                 </div>
                 <div class="oilInfoArea__contentArea">
-                    <!-- <h1 class="oilInfoArea__contentTitle">
+                    <div class="oilInfoArea__profileContainer">
+                        <div class="oilInfoArea__profileTitleBox">
+                            <h2>주행자</h2>
+                            <span>jaewon</span>
+                        </div>
+                        <div class="oilInfoArea__profileContentBox">
+                            <div class="oilInfoArea__profileContentBox--gender">
+                                <h2>성별</h2>
+                                <div class="oilInfoArea__inputBoxArea--gender">
+                                    <input type="radio" name="gender" value="남자" id="radio--male" checked>
+                                    <label for="radio--male">남자</label>
+                                    <input type="radio" name="gender" value="여자" id="radio--female">
+                                    <label for="radio--female">여자</label>
+                                </div>
+                            </div>
+                            <div class="oilInfoArea__profileContentBox--age">
+                                <h2>나이</h2>
+                                <div class="oilInfoArea__inputBoxArea--age">
+                                    <input type="radio" name="age" value="20대" id="radioAge--20" checked>
+                                    <label for="radioAge--20">20대</label>
+                                    <input type="radio" name="age" value="30대" id="radioAge--30">
+                                    <label for="radioAge--30">30대</label>
+                                    <input type="radio" name="age" value="40대" id="radioAge--40">
+                                    <label for="radioAge--40">40대</label>
+                                    <input type="radio" name="age" value="50대" id="radioAge--50">
+                                    <label for="radioAge--50">50대</label>
+                                    <input type="radio" name="age" value="60대 이상" id="radioAge--60">
+                                    <label for="radioAge--60">60대 이상</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oilInfoArea__profileBtnBox">
+                            <button>취소</button>
+                            <button>적용</button>
+                        </div>
+                    </div>
+                    <!-- 주유 정보 입력
+                    <h1 class="oilInfoArea__contentTitle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 48" fill="none">
                             <path d="M17.5 0L15.5167 1.98333C14.875 2.625 0 17.675 0 30.45C0 40.075 7.875 47.95 17.5 47.95C27.125 47.95 35 40.075 35 30.45C35 17.7333 20.125 2.625 19.4833 1.98333L17.5 0ZM8.75 27.5333C10.3833 27.5333 11.6667 28.8167 11.6667 30.45C11.6667 33.6583 14.2917 36.2833 17.5 36.2833C19.1333 36.2833 20.4167 37.5667 20.4167 39.2C20.4167 40.8333 19.1333 42.1167 17.5 42.1167C11.0833 42.1167 5.83333 36.8667 5.83333 30.45C5.83333 28.8167 7.11667 27.5333 8.75 27.5333Z" fill="#14BD7E"/>
                         </svg>
@@ -53,6 +90,7 @@
                         <button class="oilInfoArea__cancelBtn">취소</button>
                         <button class="oilInfoArea__registerBtn">등록</button>
                     </div> -->
+                    <!-- 사용량 비교 1
                     <h1 class="oilInfoArea__contentTitle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 70 70" fill="none">
                             <path d="M52.5 11.6668H49.5833V8.75016C49.5833 7.97661 49.276 7.23475 48.7291 6.68777C48.1821 6.14079 47.4402 5.8335 46.6667 5.8335C45.8931 5.8335 45.1513 6.14079 44.6043 6.68777C44.0573 7.23475 43.75 7.97661 43.75 8.75016V11.6668H26.25V8.75016C26.25 7.97661 25.9427 7.23475 25.3957 6.68777C24.8487 6.14079 24.1069 5.8335 23.3333 5.8335C22.5598 5.8335 21.8179 6.14079 21.2709 6.68777C20.724 7.23475 20.4167 7.97661 20.4167 8.75016V11.6668H17.5C15.1794 11.6668 12.9538 12.5887 11.3128 14.2296C9.67187 15.8706 8.75 18.0962 8.75 20.4168V55.4168C8.75 57.7375 9.67187 59.9631 11.3128 61.604C12.9538 63.245 15.1794 64.1668 17.5 64.1668H52.5C54.8206 64.1668 57.0462 63.245 58.6872 61.604C60.3281 59.9631 61.25 57.7375 61.25 55.4168V20.4168C61.25 18.0962 60.3281 15.8706 58.6872 14.2296C57.0462 12.5887 54.8206 11.6668 52.5 11.6668ZM17.5 17.5002H20.4167V20.4168C20.4167 21.1904 20.724 21.9322 21.2709 22.4792C21.8179 23.0262 22.5598 23.3335 23.3333 23.3335C24.1069 23.3335 24.8487 23.0262 25.3957 22.4792C25.9427 21.9322 26.25 21.1904 26.25 20.4168V17.5002H43.75V20.4168C43.75 21.1904 44.0573 21.9322 44.6043 22.4792C45.1513 23.0262 45.8931 23.3335 46.6667 23.3335C47.4402 23.3335 48.1821 23.0262 48.7291 22.4792C49.276 21.9322 49.5833 21.1904 49.5833 20.4168V17.5002H52.5C53.2735 17.5002 54.0154 17.8075 54.5624 18.3544C55.1094 18.9014 55.4167 19.6433 55.4167 20.4168V32.0835H14.5833V20.4168C14.5833 19.6433 14.8906 18.9014 15.4376 18.3544C15.9846 17.8075 16.7265 17.5002 17.5 17.5002ZM52.5 58.3335H17.5C16.7265 58.3335 15.9846 58.0262 15.4376 57.4792C14.8906 56.9322 14.5833 56.1904 14.5833 55.4168V37.9168H55.4167V55.4168C55.4167 56.1904 55.1094 56.9322 54.5624 57.4792C54.0154 58.0262 53.2735 58.3335 52.5 58.3335Z" fill="#14BD7E"/>
@@ -76,7 +114,7 @@
                                 <div class="oilInfoArea__compareImgBox">img</div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </section>
