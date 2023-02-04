@@ -576,6 +576,70 @@ button {
                     }
                 }
             }
+
+            // 주유 기록 열람
+            & .oilInfoArea__oilHistoryContainer {
+                width: 95%;
+                height: 100%;
+                margin: 0 auto;
+
+                & .oilInfoArea_oilHistorytitle {
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & h2 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        height: 50%;
+                        background-color: #14BD7E;
+                        font-size: 1.5rem;
+                        color: #fff;
+                        font-weight: 600;
+                        border-radius: 0.5vh;
+                    }
+                }
+
+                & .oioInfoArea__oilHistoryTable {
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 65%;
+                    text-align: center;
+
+                    & tbody {
+                        & tr {
+                            padding: 0.5vh 0;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            border-bottom: 1px solid #F5F5F5;
+
+                            & img {
+                                width: 90%;
+                                height: 90%;
+                            }
+
+                            &:nth-child(2n + 1) {
+                                & :last-child {
+                                    color: #3181F6;
+                                }
+                            }
+
+                            &:nth-child(2n) {
+                                & :last-child {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         & .oilInfoArea__buttonArea {
