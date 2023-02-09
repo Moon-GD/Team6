@@ -23,8 +23,10 @@ function fetchRegisterID(requestBody) {
     fetch(REGISTER_URL, {
         method: METHOD.POST,
         headers: HEADER.POST,
-        body: JSON.stringify(requestBody)
+        body: JSON.stringify(requestBody),
+        credentials: "include"
     }).then((res) => {
+        console.log(res);
         if(res.status === 201) {
             location.assign("/login");
         }
