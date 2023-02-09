@@ -7,7 +7,8 @@ const fetchLoginID = ($IDInput, $PWInput) => {
         body: JSON.stringify({
             "id": $IDInput.value,
             "password": $PWInput.value
-        })
+        }),
+        credentials: "include"
     }).then((res) => {
         if(res.status === 201) {
             location.assign("/");
