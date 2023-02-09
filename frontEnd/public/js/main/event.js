@@ -1,6 +1,12 @@
-import { addEvent, makeLighter, pipe } from "../common/function.js";
+import { addEvent, makeNodeArrayLighterSubsequently, pipe } from "../common/function.js";
 import { deleteChatNode, getChatTextArray } from "./helperFunction.js";
-import { chatBotAnswerView__myPage01, chatBotAnswerView__myPage02, chatBotManagerView, chatBotQuestionView, chatBotView } from "./view.js";
+import { 
+    chatBotAnswerView__myPage01, chatBotAnswerView__myPage02, 
+    chatBotManagerView, chatBotView,
+    chatBotAnswerView__gas01, chatBotAnswerView__gas02, chatBotAnswerView__gas03, 
+    chatBotAnswerView__ETC01, chatBotAnswerView__ETC02,
+    chatBotQuestionView, chatBotQuestionView01, chatBotQuestionView02, chatBotQuestionView03,
+} from "./view.js";
 
 let chatBotArea = "";
 
@@ -34,39 +40,77 @@ const eventToSaveChat = ($saveChat) => addEvent($saveChat, [
         const $answerText01 = chatBotAnswerView__myPage01();
         const $answerText02 = chatBotAnswerView__myPage02();
         const $chatBotManagerView = chatBotManagerView();
-        const $questionText01 = chatBotQuestionView();
+        const $questionText01 = chatBotQuestionView01();
+        const $questionText02 = chatBotQuestionView02();
+        const $questionText03 = chatBotQuestionView03();
+        
+        chatBotArea.appendChild($answerText01);
+        chatBotArea.appendChild($answerText02);
+        chatBotArea.appendChild($chatBotManagerView);
+        chatBotArea.appendChild($questionText01);
+        chatBotArea.appendChild($questionText02);
+        chatBotArea.appendChild($questionText03);
+
+        chatBotArea.scrollTop = chatBotArea.scrollHeight;
+
+        makeNodeArrayLighterSubsequently(
+            [$answerText01, $answerText02, $chatBotManagerView, $questionText01, $questionText02, $questionText03], 
+        300);
+    }
+]);
+
+const eventToSearchChat = ($searchChat) => addEvent($searchChat, [
+    () => deleteChatNode(),
+    () => chatBotArea = document.querySelector(".chatBotArea__background"),
+    () => {
+        const $answerText01 = chatBotAnswerView__gas01();
+        const $answerText02 = chatBotAnswerView__gas02();
+        const $answerText03 = chatBotAnswerView__gas03();
+        const $chatBotManagerView = chatBotManagerView();
+        const $questionText01 = chatBotQuestionView01();
+        const $questionText02 = chatBotQuestionView02();
+        const $questionText03 = chatBotQuestionView03();
+
+        chatBotArea.appendChild($answerText01);
+        chatBotArea.appendChild($answerText02);
+        chatBotArea.appendChild($answerText03);
+        chatBotArea.appendChild($chatBotManagerView);
+        chatBotArea.appendChild($questionText01);
+        chatBotArea.appendChild($questionText02);
+        chatBotArea.appendChild($questionText03);
+
+        chatBotArea.scrollTop = chatBotArea.scrollHeight;
+
+        makeNodeArrayLighterSubsequently(
+            [$answerText01, $answerText02, $answerText03, $chatBotManagerView, $questionText01, $questionText02, $questionText03], 
+        300);
+    }
+]);
+
+const eventToClientChat = ($clientChat) => addEvent($clientChat, [
+    () => deleteChatNode(),
+    () => chatBotArea = document.querySelector(".chatBotArea__background"),
+    () => {
+        const $answerText01 = chatBotAnswerView__ETC01();
+        const $answerText02 = chatBotAnswerView__ETC02();
+        const $chatBotManagerView = chatBotManagerView();
+        const $questionText01 = chatBotQuestionView01();
+        const $questionText02 = chatBotQuestionView02();
+        const $questionText03 = chatBotQuestionView03();
 
         chatBotArea.appendChild($answerText01);
         chatBotArea.appendChild($answerText02);
         chatBotArea.appendChild($chatBotManagerView);
         chatBotArea.appendChild($questionText01);
+        chatBotArea.appendChild($questionText02);
+        chatBotArea.appendChild($questionText03);
 
-        setTimeout(() => {
-            makeLighter($answerText01);
-            chatBotArea.scrollTop = chatBotArea.scrollHeight;
-        }, 500);
+        chatBotArea.scrollTop = chatBotArea.scrollHeight;
 
-        setTimeout(() => {
-            makeLighter($answerText02);
-            chatBotArea.scrollTop = chatBotArea.scrollHeight;
-        }, 1000);
-
-        setTimeout(() => {
-            makeLighter($chatBotManagerView);
-            chatBotArea.scrollTop = chatBotArea.scrollHeight;
-        }, 1500);
-
-        setTimeout(() => {
-            makeLighter($questionText01);
-            chatBotArea.scrollTop = chatBotArea.scrollHeight;
-        }, 2000);
+        makeNodeArrayLighterSubsequently(
+            [$answerText01, $answerText02, $chatBotManagerView, $questionText01, $questionText02, $questionText03], 
+        300);
     }
 ]);
 
-const eventToSearchChat = ($searchChat) => addEvent($searchChat, 
-    [() => deleteChatNode()]);
-
-const eventToClientChat = ($clientChat) => addEvent($clientChat, 
-    [() => deleteChatNode()]);
-
-export { eventToChatBot, eventToSaveChat }
+export { eventToChatBot, eventToSaveChat, eventToSearchChat }

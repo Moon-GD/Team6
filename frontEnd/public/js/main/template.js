@@ -80,7 +80,7 @@ const getChatBotTemplate = () => `
             <span>마이 페이지는 어떻게 활용하나요?</span>
         </div>
         <div class="chatBotArea__chat">
-            <span>주변 주유소 검색은 어떻게 사용하나요?</span>
+            <span>주변 주유소 검색은 어떻게 활용하나요?</span>
         </div>
         <div class="chatBotArea__chat">
             <span>그 밖에 문의를 하고 싶어요.</span>
@@ -99,7 +99,24 @@ const getMyPageAnswerChatTemplate01 = () =>
 const getMyPageAnswerChatTemplate02 = () => 
     `<span>주행자님의 인적 정보를 자유롭게 수정하고, 주유 기록을 관리할 수 있는 공간이에요.</span>`;
 
+const getGasAnswerChatTemplate01 = () => 
+    `<span>주행자님 접속 위치를 기반으로 주변 주유소를 보여드릴꺼에요.</span>`;
+
+const getGasAnswerChatTemplate02 = () => 
+    `<span>지도에서 위치를 확인할 수 있고, 지도 좌측 리스트에서 주유소 요약 정보를 확인할 수 있어요.</span>`;
+
+const getGasAnswerChatTemplate03 = () => 
+    `<span>주유소를 클릭하면 상세 정보를 확인할 수 있습니다.</span>`;
+
+const getETCAnswerChatTemplate01 = () => 
+    `<span>기타 문의 내용은 아래 메일로 보내주시면 친절히 답변드리도록 하겠습니다. 😀</span>`;
+
+const getETCAnswerChatTemplate02 = () => 
+    `<span>문의 내용 : <strong>king4mun@gmail.com</strong></span>`;
+
 export { 
-    getMainViewContentTemplate, getChatBotTemplate, getMyPageAnswerChatTemplate01, getMyPageAnswerChatTemplate02,
-    getManagerChatTemplate
+    getMainViewContentTemplate, getChatBotTemplate, getManagerChatTemplate,
+    getMyPageAnswerChatTemplate01, getMyPageAnswerChatTemplate02,
+    getGasAnswerChatTemplate01, getGasAnswerChatTemplate02, getGasAnswerChatTemplate03,
+    getETCAnswerChatTemplate01, getETCAnswerChatTemplate02
 }

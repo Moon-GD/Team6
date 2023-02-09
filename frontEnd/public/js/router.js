@@ -41,7 +41,7 @@ const router = async () => {
 
     const getNode = match.route.view;
     $body.replaceWith(getNode());
-}
+}   
 
 // 페이지 전환 함수
 const navigateTo = url => {

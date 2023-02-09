@@ -5,9 +5,7 @@ NodeList.prototype.forEach = Array.prototype.forEach;
 const getChatTextArray = ($chatBotContent) => $chatBotContent.querySelectorAll(".chatBotArea__chat");
 
 const deleteChatNode = () => pipe(
-    ($chatTextArray) => $chatTextArray.forEach(($chatText, index) => {
-        setTimeout(() => $chatText.remove(), 150 * index);
-    })
+    ($chatTextArray) => $chatTextArray.forEach(($chatText) => $chatText.remove())
 )(document.querySelectorAll(".chatBotArea__chat"));
 
 const initializeChatBotContent = ($chatBotContent) => {
