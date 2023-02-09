@@ -112,7 +112,7 @@ const getETCAnswerChatTemplate01 = () =>
     `<span>기타 문의 내용은 아래 메일로 보내주시면 친절히 답변드리도록 하겠습니다. 😀</span>`;
 
 const getETCAnswerChatTemplate02 = () => 
-    `<span>문의 내용 : <strong>king4mun@gmail.com</strong></span>`;
+    `<span>E-mail : <strong>king4mun@gmail.com</strong></span>`;
 
 export { 
     getMainViewContentTemplate, getChatBotTemplate, getManagerChatTemplate,
