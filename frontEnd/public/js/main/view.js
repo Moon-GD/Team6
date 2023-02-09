@@ -1,5 +1,5 @@
 import { navBarView } from "../navbar/view.js";
-import { eventToChatBot } from "./event.js";
+import { eventToChatBot, eventToSaveChat } from "./event.js";
 import { getChatBotTemplate, getMainViewContentTemplate, getManagerChatTemplate, getMyPageAnswerChatTemplate01, getMyPageAnswerChatTemplate02 } from "./template.js";
 
 const mainView = () => {
@@ -34,6 +34,16 @@ const chatBotManagerView = () => {
     return $chatBotManagerView;
 }
 
+const chatBotQuestionView = () => {
+    const $chatQuestioin01 = document.createElement("div");
+    $chatQuestioin01.classList.add("chatBotArea__chat", "reChat");
+    $chatQuestioin01.innerHTML = `<span>마이 페이지는 어떻게 활용하나요?</span>`;
+
+    eventToSaveChat($chatQuestioin01);
+
+    return $chatQuestioin01;
+}
+
 const chatBotAnswerView__myPage01 = () => {
     const $answerMyPage01 = document.createElement("div");
     $answerMyPage01.classList.add("chatBotArea__answer");
@@ -53,5 +63,5 @@ const chatBotAnswerView__myPage02 = () => {
 export { 
     mainView, chatBotView, 
     chatBotAnswerView__myPage01, chatBotAnswerView__myPage02,
-    chatBotManagerView
+    chatBotManagerView, chatBotQuestionView
 }
