@@ -11,10 +11,17 @@ const replaceChildWithFadeEffect = ($parent, $child) => {
 }
 
 const pipe = (...functionList) => (firstParam) => 
-    functionList.reduce((curValue, curFunc) => { 
-        return curFunc(curValue);
-    }, firstParam);
+    functionList.reduce((curValue, curFunc) => 
+        curFunc(curValue), firstParam);
 
 const makeLighter = ($target) => $target.style.opacity = 1;
 
-export { addEvent, changeCSS, replaceChildWithFadeEffect, pipe, makeLighter }
+const giveErrorStyle = ($target, styleKey, originalStyle, changeStyle, time) => {
+    changeCSS($target, styleKey, changeStyle);
+    setTimeout(() => {
+        changeCSS($target, styleKey, originalStyle);
+        $target.focus();
+    }, time);
+} 
+
+export { addEvent, changeCSS, replaceChildWithFadeEffect, pipe, makeLighter, giveErrorStyle }

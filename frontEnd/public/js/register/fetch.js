@@ -5,7 +5,7 @@ const ID_VALIDATION_URL = BASE_COMMON_URL + "/auth";
 const REGISTER_URL = BASE_COMMON_URL + "/user";
 
 function fetchValidateID($IDInput, $IDValidateBtn, $registerBtn) {
-    fetch(ID_VALIDATION_URL + `?id="${$IDInput.value}"`, {
+    fetch(ID_VALIDATION_URL + `?id=${$IDInput.value}`, {
         method: METHOD.GET
     }).then((res) => {
         if(res.status === 200) {

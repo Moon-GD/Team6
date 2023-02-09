@@ -1,4 +1,4 @@
-import { addEvent, changeCSS } from "../common/function"
+import { addEvent, changeCSS, giveErrorStyle } from "../common/function"
 import { fetchRegisterID, fetchValidateID } from "./fetch";
 import { getRegisterFetchBody, isSamePWInputs } from "./helperFunction";
 
@@ -33,40 +33,32 @@ const eventToRegisterBtn = ($container) => {
 
     addEvent($registerBtn, [() => {
         if($selectGender.value === "성별") {
-            changeCSS($selectGender, "outline", "0.4vh solid red");
-            setTimeout(() => changeCSS($selectGender, "outline", "0vh solid #14BD7E"), 1000);
-            $selectGender.focus();
+            giveErrorStyle($selectGender, "outline", "0vh solid #14BD7E", "0.4vh solid red", 1000);
+            
             return;
         }
 
         if($selectAge.value == "나이") {
-            changeCSS($selectAge, "outline", "0.4vh solid red");
-            setTimeout(() => changeCSS($selectAge, "outline", "0vh solid #14BD7E"), 1000);
+            giveErrorStyle($selectAge, "outline", "0vh solid #14BD7E", "0.4vh solid red", 1000);
+
             return;
         }
 
         if($pwInput.value === "") {
-            changeCSS($pwInput, "outline", "0.4vh solid red");
-            setTimeout(() => {
-                changeCSS($pwInput, "outline", "0vh solid #14BD7E");
-                $pwInput.focus();
-            }, 1000);
+            giveErrorStyle($pwInput, "outline", "0vh solid #14BD7E", "0.4vh solid red", 1000);
 
-            return ;
+            return;
         }
 
         if($pwReInput.value === "") {
-            changeCSS($pwReInput, "outline", "0.4vh solid red");
-            setTimeout(() => {
-                changeCSS($pwReInput, "outline", "0vh solid #14BD7E");
-                $pwReInput.focus();
-            }, 1000);
+            giveErrorStyle($pwReInput, "outline", "0vh solid #14BD7E", "0.4vh solid red", 1000);
 
-            return ;
+            return;
         }
 
         if(!isSamePWInputs($pwInput, $pwReInput)) {
             $pwInput.focus();
+
             return;
         }
 

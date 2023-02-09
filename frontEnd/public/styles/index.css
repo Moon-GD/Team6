@@ -1455,6 +1455,8 @@ a {
   color: #14BD7E;
 }
 .loginArea .loginArea__backGround .loginArea__frame input {
+  transition: 0.1s;
+  border-radius: 0.5vh;
   color: #14BD7E;
   background-color: #FAFAFB;
   font-size: 1.2rem;
@@ -1471,7 +1473,11 @@ a {
 .loginArea .loginArea__backGround .loginArea__frame input::placeholder {
   color: #D5DDE6;
 }
+.loginArea .loginArea__backGround .loginArea__frame input:focus {
+  outline: 0.2vh solid #14BD7E;
+}
 .loginArea .loginArea__backGround .loginArea__frame button {
+  border-radius: 0.5vh;
   padding: 2vh 0;
   color: #fff;
   background-color: #14BD7E;

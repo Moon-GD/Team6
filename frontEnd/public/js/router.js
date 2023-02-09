@@ -23,12 +23,6 @@ const routes = [
     { path: "/404", view: notFoundView }
 ];
 
-const moveTo = url => {
-    let viewFunction = routes.find((route) => route.path === url).view;
-    history.pushState(null, null, url);
-    $body.replaceWith(viewFunction());
-}
-
 const router = async () => {
     let match = routes.map(route => {
         return {
