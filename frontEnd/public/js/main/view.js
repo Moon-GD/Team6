@@ -1,6 +1,6 @@
 import { navBarView } from "../navbar/view.js";
 import { eventToChatBot } from "./event.js";
-import { getChatBotTemplate, getMainViewContentTemplate } from "./template.js";
+import { getChatBotTemplate, getMainViewContentTemplate, getManagerChatTemplate, getMyPageAnswerChatTemplate01, getMyPageAnswerChatTemplate02 } from "./template.js";
 
 const mainView = () => {
     const $mainViewContainer = document.createElement("section");
@@ -26,15 +26,32 @@ const chatBotView = () => {
     return $chatBotContainer;
 }
 
+const chatBotManagerView = () => {
+    const $chatBotManagerView = document.createElement("div");
+    $chatBotManagerView.classList.add("chatBotArea__managerProfile");
+    $chatBotManagerView.innerHTML = getManagerChatTemplate();
+
+    return $chatBotManagerView;
+}
+
 const chatBotAnswerView__myPage01 = () => {
     const $answerMyPage01 = document.createElement("div");
     $answerMyPage01.classList.add("chatBotArea__answer");
-    $answerMyPage01.innerHTML = `
-        <span>마이 페이지는 프로필 수정, 주유 기록 입력, 이번 달 비교, 월별 비교, 주유 기록 열람 텝으로 이루어져 있어요.</span>
-        <span>주행자님의 인적 정보를 자유롭게 수정하고, 주유 기록을 관리할 수 있는 공간이에요.</span>
-    `;
+    $answerMyPage01.innerHTML = getMyPageAnswerChatTemplate01();
 
     return $answerMyPage01;
 }
 
-export { mainView, chatBotView, chatBotAnswerView__myPage01 }
+const chatBotAnswerView__myPage02 = () => {
+    const $answerMyPage02 = document.createElement("div");
+    $answerMyPage02.classList.add("chatBotArea__answer");
+    $answerMyPage02.innerHTML = getMyPageAnswerChatTemplate02();
+
+    return $answerMyPage02;
+}
+
+export { 
+    mainView, chatBotView, 
+    chatBotAnswerView__myPage01, chatBotAnswerView__myPage02,
+    chatBotManagerView
+}

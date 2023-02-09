@@ -88,6 +88,18 @@ const getChatBotTemplate = () => `
     </div>
 `;
 
+const getManagerChatTemplate = () => `
+    <img src="./img/managerProfile.png" alt="profile">
+    <span>또 궁금한 게 있나요?</span>
+`;
+
+const getMyPageAnswerChatTemplate01 = () => 
+    `<span>마이 페이지는 프로필 수정, 주유 기록 입력, 이번 달 비교, 월별 비교, 주유 기록 열람 텝으로 이루어져 있어요.</span>`;
+
+const getMyPageAnswerChatTemplate02 = () => 
+    `<span>주행자님의 인적 정보를 자유롭게 수정하고, 주유 기록을 관리할 수 있는 공간이에요.</span>`;
+
 export { 
-    getMainViewContentTemplate, getChatBotTemplate 
+    getMainViewContentTemplate, getChatBotTemplate, getMyPageAnswerChatTemplate01, getMyPageAnswerChatTemplate02,
+    getManagerChatTemplate
 }

@@ -292,7 +292,6 @@ a {
         width: 30vw;
         height: 60vh;
         z-index: 1;
-        color: #ECECEC;
         background-color: #ECECEC;
 
         & .chatBotArea__background {
@@ -316,10 +315,10 @@ a {
             }
 
             & .chatBotArea__profile {
-                transition: 0.5;
-                width: 90%;
+                transition: 0.5s;
+                width: 95%;
                 height: 5vh;
-                margin: 0 0 1.5vh;
+                margin: 0 auto 1.5vh;
                 padding: 0.5vh 0;
                 transition: 0.5s;
                 background-color: #14BD7E;
@@ -327,6 +326,8 @@ a {
                 justify-content: center;
                 align-items: center;
                 border-radius: 2vh;
+                color: #fff;
+
                 & img {
                     transition: 0.5s;
                     height: 5vh;
@@ -339,7 +340,7 @@ a {
     
                 & span {
                     width: 90%;
-                    text-align: left;
+                    text-align: center;
                     font-size: 1rem;
                     font-weight: 600;
                 }
@@ -364,14 +365,14 @@ a {
     
             & .chatBotArea__chat {
                 transition: 0.2s;
-                margin: 1.5vh 0;
+                margin: 1.5vh auto;
                 padding: 0.5vh 1.5vw;
-                width: 80%;
+                width: 85%;
                 height: 5vh;
                 background-color: #fff;
                 color: #14BD7E;
                 display: flex;
-                justify-content: right;
+                justify-content: center;
                 align-items: center;
                 border-radius: 2vh;
                 cursor: pointer;
@@ -384,23 +385,56 @@ a {
             }
 
             & .chatBotArea__answer {
-                transition: 0.2s;
-                margin: 1.5vh 0;
+                transition: 0.5s;
+                margin: 1.5vh auto;
                 padding: 0.5vh 1.5vw;
-                width: 80%;
+                opacity: 0;
+                width: 85%;
                 height: 5vh;
-                background-color: #fff;
-                color: #14BD7E;
+                background-color: #14BD7E;
+                color: #fff;
                 display: flex;
-                justify-content: right;
+                justify-content: center;
                 align-items: center;
                 border-radius: 2vh;
-                cursor: pointer;
     
                 & span {
                     font-size: 1rem;
                     font-weight: 600;
                     line-height: 1.2;
+                }
+            }
+
+            & .chatBotArea__managerProfile {
+                opacity: 0;
+                transition: 0.5s;
+                width: 95%;
+                height: 5vh;
+                margin: 0 auto 1.5vh;
+                padding: 0.5vh 0;
+                transition: 0.5s;
+                background-color: #14BD7E;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2vh;
+                color: #fff;
+
+                & img {
+                    transition: 0.5s;
+                    height: 5vh;
+                    margin-top: 0.5vh;
+    
+                    &:hover {
+                        margin-top: -1vh;
+                    }
+                }
+    
+                & span {
+                    width: 90%;
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: 600;
                 }
             }
         }

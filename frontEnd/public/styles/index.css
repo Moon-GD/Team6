@@ -921,7 +921,6 @@ a {
   width: 30vw;
   height: 60vh;
   z-index: 1;
-  color: #ECECEC;
   background-color: #ECECEC;
 }
 .main .chatBotArea .chatBotArea__background {
@@ -942,10 +941,10 @@ a {
   background-color: #ECECEC;
 }
 .main .chatBotArea .chatBotArea__background .chatBotArea__profile {
-  transition: 0.5;
-  width: 90%;
+  transition: 0.5s;
+  width: 95%;
   height: 5vh;
-  margin: 0 0 1.5vh;
+  margin: 0 auto 1.5vh;
   padding: 0.5vh 0;
   transition: 0.5s;
   background-color: #14BD7E;
@@ -953,6 +952,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 2vh;
+  color: #fff;
 }
 .main .chatBotArea .chatBotArea__background .chatBotArea__profile img {
   transition: 0.5s;
@@ -964,7 +964,7 @@ a {
 }
 .main .chatBotArea .chatBotArea__background .chatBotArea__profile span {
   width: 90%;
-  text-align: left;
+  text-align: center;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -985,14 +985,14 @@ a {
 }
 .main .chatBotArea .chatBotArea__background .chatBotArea__chat {
   transition: 0.2s;
-  margin: 1.5vh 0;
+  margin: 1.5vh auto;
   padding: 0.5vh 1.5vw;
-  width: 80%;
+  width: 85%;
   height: 5vh;
   background-color: #fff;
   color: #14BD7E;
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   border-radius: 2vh;
   cursor: pointer;
@@ -1001,6 +1001,54 @@ a {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
+}
+.main .chatBotArea .chatBotArea__background .chatBotArea__answer {
+  transition: 0.5s;
+  margin: 1.5vh auto;
+  padding: 0.5vh 1.5vw;
+  opacity: 0;
+  width: 85%;
+  height: 5vh;
+  background-color: #14BD7E;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+}
+.main .chatBotArea .chatBotArea__background .chatBotArea__answer span {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.main .chatBotArea .chatBotArea__background .chatBotArea__managerProfile {
+  opacity: 0;
+  transition: 0.5s;
+  width: 95%;
+  height: 5vh;
+  margin: 0 auto 1.5vh;
+  padding: 0.5vh 0;
+  transition: 0.5s;
+  background-color: #14BD7E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+  color: #fff;
+}
+.main .chatBotArea .chatBotArea__background .chatBotArea__managerProfile img {
+  transition: 0.5s;
+  height: 5vh;
+  margin-top: 0.5vh;
+}
+.main .chatBotArea .chatBotArea__background .chatBotArea__managerProfile img:hover {
+  margin-top: -1vh;
+}
+.main .chatBotArea .chatBotArea__background .chatBotArea__managerProfile span {
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .main section.explainArea#explainArea--1 {
   -webkit-animation-duration: 15s;
