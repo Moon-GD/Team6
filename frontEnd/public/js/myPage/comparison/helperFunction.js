@@ -108,7 +108,10 @@ const makeComparisonCards = ($container, userOilPrice, averageEcoPrice, userSave
     const $secondTitle = _$(".oilInfoArea__otherText", $container);
     const $commonSaveCard = _$(".oilInfoArea__compareAgeCommonBox", $container);
     const $chartBox = _$(".oilInfoArea__chartBox", $container);
-    const $compareImage = _$(".oilInfoArea__compareImgBox > img", $container);
+    const $compareImageBox = _$(".oilInfoArea__compareImgBox", $container);
+    const $compareImage = document.createElement("img");
+
+    $compareImageBox.appendChild($compareImage);
 
     makeComparisonTitle($firstTitle, userSavePrice);
     makeUserOilExpenditureCard($userSaveCardContent, userOilPrice);

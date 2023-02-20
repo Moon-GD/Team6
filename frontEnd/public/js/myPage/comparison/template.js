@@ -53,7 +53,6 @@ const getComparisonTemplate = () => `
                                 </div>
                             </div>
                             <div class="oilInfoArea__compareImgBox">
-                                <img src="./" alt="이미지가 존재하지 않습니다.">
                             </div>
                         </div>
                     </div>
